@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title> プログラミング 氏名：白石武丸 </title> 
+    <script language = "JavaScript">
+      function calc( ) {
+	
+
+
+	riritu=new Array();
+	riritu[0]=fm1.q1.value*1;
+	riritu[1]=fm1.q2.value*1;
+	riritu[2]=fm1.q3.value*1;
+	riritu[3]=fm1.q4.value*1;
+	
+	shikin=fm1.genshi.value*1;
+	sum=fm1.genshi.value*1;
+	kikan=fm1.nenA.value*1;
+
+	for(j=0;j<kikan;j++){
+		for(i=0;i<4;i++){
+		 sum+=Math.round(sum*riritu[i]/100/4);
+	  }	
+	 }
+
+	fm1.nenB.value=kikan;
+	fm1.fukuri.value=sum;
+	fm1.risoku.value=sum-shikin;
+      }
+    </script>
+  </head>
+
+  <body>
+    <hr> <br>
+    各四半期の預入時点での年率金利が以下であった場合、<br> <br>
+    <input type = "text"  size = "15"  name = "genshi"> 円
+    の資金を3ヶ月定期で
+    <input type = "text"  size = "5"  name = "nenA">年間
+    複利運用した場合をシミュレートします。
+    <br> <br>
+
+<center>
+<table border="1" width="500">
+<tr>
+<th>  </th>
+<th> 第1四半期 </th>
+<th> 第2四半期 </th>
+<th> 第3四半期 </th>
+<th> 第4四半期 </th>
+</tr>
+<tr>
+<th> 年利 </th>
+<td align="center"> <input type = "text"  size = "5"  name = "q1"> % </td>
+<td align="center"> <input type = "text"  size = "5"  name = "q2"> % </td>
+<td align="center"> <input type = "text"  size = "5"  name = "q3"> % </td>
+<td align="center"> <input type = "text"  size = "5"  name = "q4"> % </td>
+</tr>
+</table>
+</center>
+    
+    <br> <hr> <br>
+    <input type = "button"  value = "シミュレート"  onclick = "calc( )">
+    <br> <br> <hr> <br> <br>
+    <input type = "text"  size = "5"  name = "nenB">年後には
+     <input type = "text"  size = "15"  name = "fukuri"> 円 
+   （利息 <input type = "text"  size = "15"  name = "risoku"> 円 ）
+    となります。
+    <br> <br> <hr> <br>
+  </body>
+</html>
